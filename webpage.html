@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Basic Web Page</title>
+  <style>
+    /* ===== CSS Styles ===== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    p {
+      color: #555;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to My Web Page</h1>
+  <p>Click the button to see some JavaScript in action!</p>
+  <button id="clickBtn">Click Me</button>
+  <p id="message"></p>
+
+  <script>
+    // ===== JavaScript =====
+    const button = document.getElementById('clickBtn');
+    const message = document.getElementById('message');
+
+    button.addEventListener('click', () => {
+      const now = new Date();
+      message.textContent = `You clicked the button at ${now.toLocaleTimeString()}.`;
+    });
+  </script>
+
+</body>
+</html>
